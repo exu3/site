@@ -1,9 +1,21 @@
 import React from 'react';
+import './components/main.scss';
 import ReactDOM from 'react-dom';
-import './index.css';
-import App from './App';
+import { Accordion, Card } from './components'
+
 
 ReactDOM.render(
-  <App />,
-  document.getElementById('root')
+  <div>
+    <Accordion />
+  </div>,
+	document.getElementById('root')
 );
+
+// export default function Home () {
+//   return (
+//     <div>
+//       <Accordion />
+//       <Card />
+//     </div>
+//   );
+// }
