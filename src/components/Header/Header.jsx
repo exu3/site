@@ -1,4 +1,4 @@
-import { React, NavLink } from "react";
+import { React } from "react";
 import "./Header.scss";
 
 const Header = () => {
