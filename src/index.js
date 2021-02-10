@@ -1,12 +1,17 @@
 import React from 'react';
 import './components/main.scss';
 import ReactDOM from 'react-dom';
-import { Accordion, Card } from './components'
+import { Accordion, Card, Header } from './components'
+
+const homepage = (
+  <div>
+    <Header />
+    <Card />
+    <Accordion />
+  </div>
+);
 
 ReactDOM.render(
-  <div>
-    <Accordion />
-    <Card />
-  </div>,
+  homepage,
 	document.getElementById('root')
 );

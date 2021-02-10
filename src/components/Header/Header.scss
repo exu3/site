@@ -1,0 +1,52 @@
+@import "./../main.scss";
+
+.container {
+    margin: auto;
+    width: 100%;
+    display: block;
+}
+
+.wave {
+    margin: auto;
+    display: block;
+    margin-top: 2rem;
+}
+
+.wave:hover {
+    margin: auto;
+    display: block;
+    margin-top: 2rem;
+    animation: waving 1s infinite;
+  }
+  
+  @keyframes waving {
+    50% {transform: rotate(50deg);}
+  }
+
+.hello {
+    text-align: center;
+}
+
+.navigation {
+    text-align: center;
+}
+
+.nav {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+a {
+    text-decoration: none;
+    color: black;
+}
+
+a:hover {
+    text-decoration-line: underline;
+    color: gray;
+}
+
+.list-item {
+    display: inline;
+}
