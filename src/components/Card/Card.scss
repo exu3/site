@@ -1,1 +1,34 @@
 @import "./../main.scss";
+
+.card {
+  border: 1px solid;
+  border-color: #e4e4e4;
+  border-radius: 20px;
+  object-fit: cover;
+  padding: 0.5rem;
+  display: block;
+  background-color: #e4e4e4;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+}
+
+.thumbnail {
+  width: 150px;
+  height: 100px;
+  object-fit: cover;
+  overflow: hidden;
+}
+
+.card-title {
+  padding-top: 5px;
+}
+
+.card-meta {
+  padding: -20px;
+}
+
+.btn {
+  color: #555;
+  padding: 0;
+  background-color: transparent;
+  border: none;
+}
