@@ -5,7 +5,7 @@ class Card extends React.Component {
   render() {
     const { blurb, projectName, metaInfo, image, alt } = this.props;
     return (
-      <div className="column">
+      <div className="col-4 col-s-6">
         <div className="card">
           <div className="card-header">
             <figure className="thumbnail">
