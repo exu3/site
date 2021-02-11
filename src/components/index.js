@@ -1,9 +1,9 @@
 import { Accordion } from "./Accordion";
-import { Card } from "./Card";
+import { Projects } from "./Projects";
 import { Header } from "./Header";
 
 export {
     Accordion,
-    Card,
+    Projects,
     Header
 }
