@@ -12,14 +12,28 @@ import { useTheme } from "next-themes";
 export default function Nav() {
   const { theme, setTheme } = useTheme();
   useEffect(() => {
-    console.log("Hello World.");
+    console.log("Hi there! Want to hire me? Send me a message :)");
   });
   return (
     <nav className="dark:text-white">
-      <ul className="flex flex-wrap sm:justify-between items-start sm:items-center p-8 mt-6 sm:mt-0">
-        {/* <li>Hello</li> */}
+      <div className="flex justify-end px-8 pt-8">
+        <button
+          onClick={() => {
+            setTheme(theme === "dark" ? "light" : "dark");
+            document
+              .querySelector("#theme_toggle")
+              .classList.toggle("rotate-180");
+          }}
+          className="p-2 rounded-full hover:bg-black dark:hover:bg-white hover:bg-opacity-10 dark:hover:bg-opacity-10 transform duration-200"
+          id="theme_toggle"
+        >
+          <FiSun size={24} />
+        </button>
+      </div>
+      {/* <ul className="flex flex-wrap items-start sm:items-center p-8 mt-6 sm:mt-0">
+        <li>Hello</li>
         <ul className={`mx-auto sm:mx-0 flex flex-row space-x-5`}>
-          {/* {links.map(({ href, label }) => (
+          {links.map(({ href, label }) => (
             <li className="self-center" key={`${href}${label}`}>
               <Link href={href}>
                 <a
@@ -29,7 +43,7 @@ export default function Nav() {
                 </a>
               </Link>
             </li>
-          ))} */}
+          ))}
           <li>
             <button
               onClick={() => {
@@ -45,7 +59,7 @@ export default function Nav() {
             </button>
           </li>
         </ul>
-      </ul>
+      </ul> */}
     </nav>
   );
 }

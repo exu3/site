@@ -1,7 +1,10 @@
 export default function Footer() {
   return (
     <div>
-      <p>Copyleft Ella 2021. No Rights Reserved.</p>
+      <p className="font-mono">
+        made by Ella © 2021 //{" "}
+        <a href="https://github.com/eilla1/v2">open source</a>
+      </p>
     </div>
   );
 }
