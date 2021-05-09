@@ -1,13 +1,5 @@
-# A Next.js Template
+# Personal Website V2
 
-## What it includes
+This website is built with Next.js and Tailwind CSS.
 
-- Tailwind CSS
-- next-themes (@pacocoursey)
-- swr (@vercel)
-- framer-motion
-- react-icons
-
-## Deploy to Vercel
-
-[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/git/external?repository-url=https%3A%2F%2Fgithub.com%2Feilla1%2Fnext-starter)
+Made by Ella © 2021.
