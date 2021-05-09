@@ -7,7 +7,7 @@ const links = [
   { label: "github", href: "https://github.com/eilla1" },
   { label: "linkedin", href: "https://linkedin.com/in/ellla-x" },
   { label: "devpost", href: "https://devpost.com/eilla1" },
-  { label: "email", href: "mailto:exu6056@gmail.com" },
+  { label: "email", href: "mailto:hey@ella.cx" },
 ];
 
 export default function Home() {
