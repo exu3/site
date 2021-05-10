@@ -3,7 +3,7 @@ import Head from "next/head";
 export default function HeadObject({ children }) {
   const title = "Ella";
   const description =
-    "Hey, I'm Ella. I'm currently a student and front-end web developer/designer.";
+    "Hey, I'm Ella, and this is my corner of the internet. I'm a curious student interested in web development and design.";
   const keywords = "portfolio, react, website, freelance";
   const author = "Ella";
   const twitter = "@ella";
