@@ -1,7 +1,6 @@
-import HeadObject from "../components/head";
-import Nav from "../components/nav";
 import Link from "next/link";
 import Footer from "../components/footer";
+import Layout from "../components/layout";
 
 const links = [
   { label: "github", href: "https://github.com/eilla1" },
@@ -13,12 +12,7 @@ const links = [
 export default function Home(): JSX.Element {
   return (
     <div className="dark:text-white dark:bg-black">
-      <HeadObject />
-      <Nav />
-      <main className="px-8 md:px-24 lg:px-48 xl:px-72">
-        <h1 className="md:text-8xl text-5xl font-playfair font-extrabold underline pb-4 md:pb-8 lowercase sm:leading-loose">
-          Hey, I&apos;m Ella.
-        </h1>
+      <Layout heading="hi, i'm ella.">
         <section>
           <p className="font-mono text-lg">
             I’m a high school student currently based in the Bay Area. I am
@@ -65,7 +59,7 @@ export default function Home(): JSX.Element {
             ))}
           </ul>
         </section>
-      </main>
+      </Layout>
       <div className="px-8 md:px-24 lg:px-48 p-8">
         <Footer />
       </div>
