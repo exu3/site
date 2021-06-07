@@ -7,7 +7,7 @@ const links = [
   { label: "github", href: "https://github.com/eilla1" },
   { label: "linkedin", href: "https://linkedin.com/in/ellla-x" },
   { label: "devpost", href: "https://devpost.com/eilla1" },
-  { label: "polywork", href: "https://timeline.ella.cx },
+  { label: "polywork", href: "https://timeline.ella.cx" },
 ];
 
 export default function Home() {
@@ -17,7 +17,7 @@ export default function Home() {
       <Nav />
       <main className="px-8 md:px-24 lg:px-48 xl:px-72">
         <h1 className="md:text-8xl text-5xl font-playfair font-extrabold underline pb-4 md:pb-8 lowercase sm:leading-loose">
-          Hey, I'm Ella.
+          Hey, I&apos;m Ella.
         </h1>
         <section>
           <p className="font-mono text-lg">
@@ -53,17 +53,17 @@ export default function Home() {
           <h2 className="font-sans font-bold text-2xl lowercase leading-loose">
             find me on the internet:
           </h2>
-          {links.map(({ href, label }) => (
-            <ul className="font-mono text-lg list-disc list-inside">
-              <li key={``}>
+          <ul className="font-mono text-lg list-disc list-inside">
+            {links.map(({ href, label }) => (
+              <li key={label}>
                 <Link href={href}>
                   <a className={`hover:text-gray-400 hover:underline`}>
                     {label}
                   </a>
                 </Link>
               </li>
-            </ul>
-          ))}
+            ))}
+          </ul>
         </section>
       </main>
       <div className="px-8 md:px-24 lg:px-48 p-8">
