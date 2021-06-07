@@ -10,7 +10,7 @@ const links = [
   { label: "polywork", href: "https://timeline.ella.cx" },
 ];
 
-export default function Home() {
+export default function Home(): JSX.Element {
   return (
     <div className="dark:text-white dark:bg-black">
       <HeadObject />

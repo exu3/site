@@ -1,6 +1,6 @@
 import Head from "next/head";
 
-export default function HeadObject({ children }) {
+export default function HeadObject(): JSX.Element {
   const title = "Ella";
   const description =
     "Hey, I'm Ella, and this is my corner of the internet. I'm a curious student interested in web development and design.";
@@ -25,8 +25,7 @@ export default function HeadObject({ children }) {
       <meta name="twitter:card" content="summary" />
       <meta name="twitter:site" content={twitter} />
       <meta name="twitter:creator" content={twitter} />
-      <script src='https://analytics.stacc.cc/api/script/eLOZALYw5rVL'></script>
-      {children}
+      <script src="https://analytics.stacc.cc/api/script/eLOZALYw5rVL"></script>
     </Head>
   );
 }
