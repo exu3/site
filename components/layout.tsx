@@ -1,3 +1,4 @@
+import Footer from "./footer";
 import HeadObject from "./head";
 import Nav from "./nav";
 import ThemeToggle from "./theme";
@@ -22,6 +23,9 @@ export default function Layout({
         </h1>
         <div>{children}</div>
       </main>
+      <div className="px-8 md:px-24 lg:px-48 p-8">
+        <Footer />
+      </div>
     </div>
   );
 }

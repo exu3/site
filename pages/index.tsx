@@ -1,5 +1,4 @@
 import Link from "next/link";
-import Footer from "../components/footer";
 import Layout from "../components/layout";
 
 const links = [
@@ -60,9 +59,6 @@ export default function Home(): JSX.Element {
           </ul>
         </section>
       </Layout>
-      <div className="px-8 md:px-24 lg:px-48 p-8">
-        <Footer />
-      </div>
     </div>
   );
 }
