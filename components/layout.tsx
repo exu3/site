@@ -21,9 +21,9 @@ export default function Layout({
         <h1 className="text-5xl font-extrabold leading-loose font-playfair underline">
           {heading}
         </h1>
-        <div>{children}</div>
+        <div className="min-h-screen">{children}</div>
       </main>
-      <div className="px-8 md:px-24 lg:px-48 p-8">
+      <div className="px-8 md:px-24 lg:px-48 pb-8">
         <Footer />
       </div>
     </div>

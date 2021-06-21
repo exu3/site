@@ -3,6 +3,7 @@ import Link from "next/link";
 const links = [
   { name: "home", destination: "/" },
   { name: "projects", destination: "/projects" },
+  { name: "standing invitation", destination: "/invitation" },
 ];
 
 export default function Nav(): JSX.Element {
