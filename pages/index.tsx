@@ -3,7 +3,7 @@ import Layout from "../components/layout";
 
 const links = [
   { label: "github", href: "https://github.com/eilla1" },
-  { label: "linkedin", href: "https://linkedin.com/in/ellla-x" },
+//   { label: "linkedin", href: "https://linkedin.com/in/ellla-x" },
   { label: "devpost", href: "https://devpost.com/eilla1" },
   { label: "polywork", href: "https://timeline.ella.cx" },
 ];
