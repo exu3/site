@@ -1,5 +1,5 @@
 import { useEffect } from "react";
-import { FiSun } from "react-icons/fi";
+import { FiSun, FiMoon } from "react-icons/fi";
 import { useTheme } from "next-themes";
 
 export default function ThemeToggle(): JSX.Element {
@@ -13,14 +13,14 @@ export default function ThemeToggle(): JSX.Element {
         <button
           onClick={() => {
             setTheme(theme === "dark" ? "light" : "dark");
-            document
-              .querySelector("#theme_toggle")
-              .classList.toggle("rotate-180");
           }}
-          className="p-2 rounded-full hover:bg-black dark:hover:bg-white hover:bg-opacity-10 dark:hover:bg-opacity-10 transform duration-200"
-          id="theme_toggle"
+          className="p-2 rounded-full hover:bg-black dark:hover:bg-white hover:bg-opacity-10 dark:hover:bg-opacity-10"
         >
-          <FiSun size={24} />
+          {
+            theme === "dark" ?
+              <FiSun size={24} /> :
+              <FiMoon size={24} />
+          }
         </button>
       </div>
     </nav>
