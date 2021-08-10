@@ -23,9 +23,9 @@ export default function Layout({
         </h1>
         <div>{children}</div>
       </main>
-<!--       <div className="px-8 md:px-24 lg:px-48 pb-8">
+      {/* <div className="px-8 md:px-24 lg:px-48 pb-8">
         <Footer />
-      </div> -->
+      </div> */}
     </div>
   );
 }
