@@ -14,10 +14,9 @@ export default function Home(): JSX.Element {
       <Layout heading="hi, i'm ella.">
         <section>
           <p className="font-sans">
-            I’m a high school student currently based in the Bay Area. I am
-            currently exploring front-end web development and design, and I am
-            always interested in learning new technologies. I mostly work with
-            JavaScript and use the Next.js framework. In my very limited free
+            I’m a high school student currently based in the Bay Area. I
+            mostly work with JavaScript using the Next.js framework, and I am
+            always interested in learning new technologies. In my very limited free
             time, I enjoy spending time outdoors.
           </p>
         </section>
