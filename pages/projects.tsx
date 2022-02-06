@@ -24,7 +24,7 @@ export default function Projects(): JSX.Element {
             <Project
               heading="Hydrangea Hacks"
               link="https://hydrangeahacks.tech"
-              github="https://github.com/eilla1/HydrangeaHacks-website"
+              github="https://github.com/exu3/HydrangeaHacks-website"
             >
               A website built with Next.js and Tailwind for Hydrangea Hacks, the
               largest hackathon based in the Bay Area for people of marginalized
