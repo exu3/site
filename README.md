@@ -4,25 +4,23 @@ This website is built with Next.js and Tailwind CSS.
 
 How to run it locally:
 
-1. Fork the repo, then clone it
 ```shell
-git clone https://github.com/username/v2
-```
-2. `cd` into that folder
-```
-cd v2
+git clone https://github.com/exu3/v2 && cd v2
 ```
 
-3. install dependencies
-```
+Install dependencies with npm
+```sh
 npm install
 ```
 
-4. run  it locally at localhost:3000
+Then
+
 ```
 npm run dev
 ```
 
+Visit http://localhost:3000 to see the result. 
+
 ---
 
-Made by Ella © 2021.
+Made by Ella in 2021.
