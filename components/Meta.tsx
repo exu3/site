@@ -1,10 +1,9 @@
 import Head from "next/head";
 
-export default function HeadObject(): JSX.Element {
+export default function Meta(): JSX.Element {
   const title = "Ella";
-  const description =
-    "Hey, I'm Ella, and this is my corner of the internet. I'm a curious student interested in web development and design.";
-  const keywords = "portfolio, react, website, freelance";
+  const description = "Personal website.";
+  const keywords = "flying pig";
   const author = "Ella";
   const twitter = "@ella";
   //const image = "/ogimage.png"; // This is your OpenGraph image
@@ -25,7 +24,6 @@ export default function HeadObject(): JSX.Element {
       <meta name="twitter:card" content="summary" />
       <meta name="twitter:site" content={twitter} />
       <meta name="twitter:creator" content={twitter} />
-      <script src="https://analytics.stacc.cc/api/script/eLOZALYw5rVL"></script>
     </Head>
   );
 }

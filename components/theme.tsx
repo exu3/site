@@ -1,12 +1,10 @@
 import { useEffect } from "react";
-import { FiSun, FiMoon } from "react-icons/fi";
+import Icon from "supercons";
 import { useTheme } from "next-themes";
 
 export default function ThemeToggle(): JSX.Element {
   const { theme, setTheme } = useTheme();
-  useEffect(() => {
-    console.log("Hi there! Want to hire me? Send me a message :)");
-  });
+
   return (
     <nav className="dark:text-white">
       <div className="flex justify-end px-8 pt-8">
@@ -16,11 +14,11 @@ export default function ThemeToggle(): JSX.Element {
           }}
           className="p-2 rounded-full hover:bg-black dark:hover:bg-white hover:bg-opacity-10 dark:hover:bg-opacity-10"
         >
-          {
-            theme === "dark" ?
-              <FiSun size={24} /> :
-              <FiMoon size={24} />
-          }
+          {theme === "dark" ? (
+            <Icon glyph="moon" size={30} />
+          ) : (
+            <Icon glyph="moon-fill" size={30} />
+          )}
         </button>
       </div>
     </nav>
