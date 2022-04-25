@@ -1,26 +1,23 @@
-# Personal Website V2
+# Website
 
 This website is built with Next.js and Tailwind CSS.
 
 How to run it locally:
 
 ```shell
-git clone https://github.com/exu3/v2 && cd v2
+git clone https://github.com/exu3/site && cd site
 ```
 
-Install dependencies with npm
+Install dependencies with pnpm
+
 ```sh
-npm install
+pnpm install
 ```
 
 Then
 
 ```
-npm run dev
+pnpm dev
 ```
 
-Visit http://localhost:3000 to see the result. 
-
----
-
-Made by Ella in 2021.
+Visit http://localhost:3000 to see the result.
