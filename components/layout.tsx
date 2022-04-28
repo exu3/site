@@ -3,6 +3,8 @@ import Meta from "./Meta";
 import Nav from "./Nav";
 import ThemeToggle from "./Theme";
 
+import flavorText from "../lib/flavor";
+
 interface LayoutProps {
   children: React.ReactNode;
   heading: string;
@@ -23,7 +25,7 @@ export default function Layout({
         </h1>
         <div>{children}</div>
       </main>
-      <div className="px-8 pb-8 md:px-24 lg:px-48">
+      <div className="px-8 pb-8 md:px-24 lg:px-48 xl:px-72">
         <Footer />
       </div>
     </div>

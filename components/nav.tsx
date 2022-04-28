@@ -1,13 +1,18 @@
 import Link from "next/link";
 
-const links = [{ name: "home", destination: "/" }];
+const links = [
+  { name: "home", destination: "/" },
+  { name: "awef", destination: "/" },
+];
 
 export default function Nav(): JSX.Element {
   return (
-    <div className="flex flex-row space-x-4">
+    <div className="flex flex-row items-center space-x-4">
       {links.map(({ name, destination }) => (
         <Link key={name} href={destination}>
-          <a className="pb-3 font-sans underline hover:text-gray-400">{name}</a>
+          <a className="flex items-center justify-center px-3 py-2 font-sans rounded-lg hover:bg-gray-200 dark:hover:bg-opacity-20">
+            {name}
+          </a>
         </Link>
       ))}
     </div>
