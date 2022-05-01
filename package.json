@@ -9,9 +9,11 @@
     "lint": "eslint ./ --ext js,jsx,ts,tsx"
   },
   "dependencies": {
+    "@prisma/client": "^3.13.0",
     "framer-motion": "^6.3.2",
     "next": "12.1.5",
     "next-themes": "^0.1.1",
+    "prisma": "^3.13.0",
     "react": "18.0.0",
     "react-dom": "18.0.0",
     "supercons": "^0.0.1",
