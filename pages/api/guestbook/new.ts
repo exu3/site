@@ -5,13 +5,12 @@ export default async function handler(
   req: NextApiRequest,
   res: NextApiResponse
 ) {
-  const { name, message, email, createdAt } = req.body;
+  const { name, message, email } = req.body;
   const guestbook = await prisma.guestbook.create({
     data: {
       name,
       message: message.slice(0, 500),
       email,
-      createdAt: createdAt.toString(),
     },
   });
   res.status(200).json({

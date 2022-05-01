@@ -9,7 +9,6 @@ const GuestBook = ({ records }) => {
         name: e.target.name.value,
         message: e.target.message.value,
         email: e.target.email.value,
-        createdAt: new Date().toISOString(),
       }),
       headers: {
         "Content-Type": "application/json",
@@ -32,6 +31,7 @@ const GuestBook = ({ records }) => {
           <div key={record.id}>
             <div>{record.name}</div>
             <div>{record.message}</div>
+            <div>{record.createdAt}</div>
           </div>
         ))}
       </div>
@@ -42,10 +42,18 @@ const GuestBook = ({ records }) => {
 export default GuestBook;
 
 export async function getServerSideProps() {
-  const records = await prisma.guestbook.findMany({
+  const data = await prisma.guestbook.findMany({
     orderBy: {
       createdAt: "desc",
     },
   });
+
+  const records = data.map((record) => ({
+    id: record.id,
+    name: record.name,
+    message: record.message,
+    createdAt: record.createdAt.toISOString(),
+  }));
+
   return { props: { records } };
 }
