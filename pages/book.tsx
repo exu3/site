@@ -1,3 +1,4 @@
+import Layout from "../components/Layout";
 import prisma from "../lib/prisma";
 
 const GuestBook = ({ records }) => {
@@ -18,13 +19,19 @@ const GuestBook = ({ records }) => {
   };
 
   return (
-    <>
+    <Layout heading="Guestbook">
       <div>hi</div>
       <form onSubmit={addRecord} className="flex flex-col w-24 space-y-3">
+        <label htmlFor="name">Name</label>
         <input type="text" name="name" />
+        <label htmlFor="message">Message</label>
         <input type="text" name="message" />
+        <label htmlFor="email">Email</label>
         <input type="email" name="email" />
-        <button type="submit">Submit</button>
+
+        <button type="submit" className="btn">
+          Submit
+        </button>
       </form>
       <div>
         {records.map((record) => (
@@ -35,7 +42,7 @@ const GuestBook = ({ records }) => {
           </div>
         ))}
       </div>
-    </>
+    </Layout>
   );
 };
 

@@ -4,8 +4,11 @@
 @tailwind components;
 @tailwind utilities;
 
-@layer base {
+@layer components {
   .link {
     @apply text-gray-400 hover:underline;
+  }
+  .btn {
+    @apply text-white bg-gray-800 hover:bg-gray-900;
   }
 }
