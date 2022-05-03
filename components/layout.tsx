@@ -3,8 +3,6 @@ import Meta from "./Meta";
 import Nav from "./Nav";
 import ThemeToggle from "./Theme";
 
-// import flavorText from "../lib/flavor";
-
 interface LayoutProps {
   children: React.ReactNode;
   heading: string;
