@@ -8,7 +8,9 @@ export default function Footer({
       <p>{flavorText}</p>
       <p>
         <NextLink href="https://github.com/exu3/site" passHref>
-          <a className="link">This website is open source.</a>
+          <a className="link" target="_blank" rel="noreferrer noopener">
+            This website is open source.
+          </a>
         </NextLink>
       </p>
     </div>
