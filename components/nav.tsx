@@ -2,7 +2,6 @@ import Link from "next/link";
 
 const links = [
   { name: "home", destination: "/" },
-  { name: "awef", destination: "/" },
   { name: "library", destination: "/book" },
 ];
 
