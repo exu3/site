@@ -1,6 +1,7 @@
 import Layout from "../components/Layout";
 import prisma from "../lib/prisma";
 import Entry from "../components/guestbook/Entry";
+import Link from "next/link";
 
 const GuestBook = ({ records }) => {
   // eslint-disable-next-line @typescript-eslint/no-explicit-any
@@ -22,16 +23,23 @@ const GuestBook = ({ records }) => {
 
   return (
     <Layout heading="Guestbook">
-      <div>hi</div>
+      <div>
+        <p>You find yourself in the library.</p>
+        <p>You see a guestbook.</p>
+        <p>
+          You can <Link href="/guestbook/new">write a new entry</Link> or{" "}
+          <Link href="/guestbook">read the existing entries</Link>.
+        </p>
+      </div>
 
-      <div className="mx-auto card">
-        <form onSubmit={addRecord} className="flex flex-col w-24 space-y-3">
+      <div className="mx-auto card max-w-min">
+        <form onSubmit={addRecord} className="flex flex-col space-y-3 w-96">
           <label htmlFor="name">Name</label>
-          <input type="text" name="name" required />
+          <input className="input" type="text" name="name" required />
+          {/* <label htmlFor="email">Email</label>
+          <input className="input" type="email" name="email" /> */}
           <label htmlFor="message">Message</label>
-          <input type="text" name="message" required />
-          <label htmlFor="email">Email</label>
-          <input type="email" name="email" required />
+          <textarea className="input" name="message" required />
           <button type="submit" className="btn">
             Submit
           </button>
