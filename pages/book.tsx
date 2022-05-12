@@ -1,4 +1,4 @@
-import Layout from "../components/layout";
+import Layout from "../components/Layout";
 import prisma from "../lib/prisma";
 import Entry from "../components/guestbook/Entry";
 import Link from "next/link";
