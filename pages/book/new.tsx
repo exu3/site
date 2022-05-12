@@ -46,13 +46,11 @@ export const GuestbookNew = () => {
     }
   };
   return (
-    <Layout heading="Write a message">
+    <Layout heading="The Guestbook" showNav={false}>
       <div>
-        <p>
-          Lost? Return to the <Link href="/library">Library</Link>
-        </p>
+        <p>You add yourself to the guestbook.</p>
       </div>
-      <div className="mx-auto card max-w-min">
+      <div className="card max-w-min">
         <form onSubmit={handleSubmit} className="flex flex-col space-y-3 w-96">
           <label htmlFor="name">Name</label>
           <input
@@ -81,7 +79,23 @@ export const GuestbookNew = () => {
         {success && <div className="success">{success}</div>}
       </div>
 
-      <div>{success && <p className="text-7xl">📖</p>}</div>
+      <div>
+        {success && (
+          <Link href="/book" passHref>
+            <p className="cursor-pointer text-7xl">📖</p>
+          </Link>
+        )}
+      </div>
+
+      <div>
+        <p className="pt-4">
+          Lost? Return to the{" "}
+          <Link href="/book">
+            <a className="link">Library</a>
+          </Link>
+          .
+        </p>
+      </div>
     </Layout>
   );
 };
