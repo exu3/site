@@ -6,7 +6,6 @@ export const GuestbookNew = () => {
   const [name, setName] = useState("");
   const [message, setMessage] = useState("");
   const [email, setEmail] = useState("");
-  const [createdAt, setCreatedAt] = useState(new Date());
   const [error, setError] = useState("");
   const [success, setSuccess] = useState("");
   const [isLoading, setIsLoading] = useState(false);
