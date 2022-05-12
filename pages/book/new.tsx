@@ -16,7 +16,8 @@ export const GuestbookNew = () => {
     setError("");
     setSuccess("");
   };
-  const handleSubmit = async (e) => {
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
+  const handleSubmit = async (e: any) => {
     e.preventDefault();
     setIsLoading(true);
     setError("");
@@ -45,13 +46,10 @@ export const GuestbookNew = () => {
     }
   };
   return (
-    <Layout heading="Guestbook">
+    <Layout heading="Write a message">
       <div>
-        <p>You find yourself in the library.</p>
-        <p>You see a guestbook.</p>
         <p>
-          You can <Link href="/guestbook/new">write a new entry</Link> or{" "}
-          <Link href="/guestbook">read the existing entries</Link>.
+          Lost? Return to the <Link href="/library">Library</Link>
         </p>
       </div>
       <div className="mx-auto card max-w-min">
@@ -82,6 +80,8 @@ export const GuestbookNew = () => {
         {error && <div className="error">{error}</div>}
         {success && <div className="success">{success}</div>}
       </div>
+
+      <div>{success && <p className="text-7xl">📖</p>}</div>
     </Layout>
   );
 };
