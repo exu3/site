@@ -10,7 +10,7 @@ const GuestBook = ({ records }) => {
         <p className="italic">
           You find yourself in the <strong>Library</strong>.
         </p>
-        <p className="italic">You see a guestbook.</p>
+        <p className="italic">👁️ You see a guestbook.</p>
         <p>
           You can{" "}
           <Link href="/book/new">

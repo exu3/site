@@ -45,9 +45,9 @@ export const GuestbookNew = () => {
     }
   };
   return (
-    <Layout heading="The Guestbook" showNav={false}>
+    <Layout heading="" showNav={false}>
       <div>
-        <p>You add yourself to the guestbook.</p>
+        <p className="italic">Adding a new entry to the guestbook...</p>
       </div>
       <div className="card max-w-min">
         <form onSubmit={handleSubmit} className="flex flex-col space-y-3 w-96">
