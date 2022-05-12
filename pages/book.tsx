@@ -6,12 +6,12 @@ import { useEffect } from "react";
 
 const GuestBook = ({ records }) => {
   return (
-    <Layout heading="📕">
+    <Layout heading="The Library">
       <div>
-        <p>
+        <p className="italic">
           You find yourself in the <strong>Library</strong>.
         </p>
-        <p>You see a guestbook.</p>
+        <p className="italic">You see a guestbook.</p>
         <p>
           You can{" "}
           <Link href="/book/new">
@@ -35,6 +35,7 @@ const GuestBook = ({ records }) => {
             />
           ))}
       </div>
+      <div className="h-4"></div>
     </Layout>
   );
 };
