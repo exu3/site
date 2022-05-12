@@ -6,10 +6,12 @@ import ThemeToggle from "./Theme";
 interface LayoutProps {
   children: React.ReactNode;
   heading: string;
+  showNav?: boolean;
 }
 
 export default function Layout({
   heading,
+  showNav = true,
   children,
 }: LayoutProps): JSX.Element {
   return (
@@ -17,7 +19,8 @@ export default function Layout({
       <Meta />
       <ThemeToggle />
       <main className="min-h-screen px-8 md:px-24 lg:px-48 xl:px-72">
-        <Nav />
+        {/* Only show the nav if the current page is not the homepage */}
+        {showNav && <Nav />}
         <h1 className="font-sans text-5xl font-extrabold leading-loose">
           {heading}
         </h1>

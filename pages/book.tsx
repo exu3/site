@@ -2,58 +2,38 @@ import Layout from "../components/Layout";
 import prisma from "../lib/prisma";
 import Entry from "../components/guestbook/Entry";
 import Link from "next/link";
+import { useEffect } from "react";
 
 const GuestBook = ({ records }) => {
-  // eslint-disable-next-line @typescript-eslint/no-explicit-any
-  const addRecord = async (e: any) => {
-    e.preventDefault();
-
-    await fetch("/api/guestbook/new", {
-      body: JSON.stringify({
-        name: e.target.name.value,
-        message: e.target.message.value,
-        email: e.target.email.value,
-      }),
-      headers: {
-        "Content-Type": "application/json",
-      },
-      method: "POST",
-    });
-  };
-
   return (
-    <Layout heading="Guestbook">
+    <Layout heading="📕">
       <div>
-        <p>You find yourself in the library.</p>
+        <p>
+          You find yourself in the <strong>Library</strong>.
+        </p>
         <p>You see a guestbook.</p>
         <p>
-          You can <Link href="/guestbook/new">write a new entry</Link> or{" "}
-          <Link href="/guestbook">read the existing entries</Link>.
+          You can{" "}
+          <Link href="/book/new">
+            <a className="link">write a new entry</a>
+          </Link>{" "}
+          or read the existing entries.
         </p>
       </div>
 
-      <div className="mx-auto card max-w-min">
-        <form onSubmit={addRecord} className="flex flex-col space-y-3 w-96">
-          <label htmlFor="name">Name</label>
-          <input className="input" type="text" name="name" required />
-          {/* <label htmlFor="email">Email</label>
-          <input className="input" type="email" name="email" /> */}
-          <label htmlFor="message">Message</label>
-          <textarea className="input" name="message" required />
-          <button type="submit" className="btn">
-            Submit
-          </button>
-        </form>
-      </div>
-      <div>
-        {records.map((r) => (
-          <Entry
-            key={r.id}
-            name={r.name}
-            message={r.message}
-            createdAt={r.createdAt}
-          />
-        ))}
+      <div className="h-10"></div>
+
+      <div className="space-y-3">
+        {records
+          .filter((r) => r.message)
+          .map((r) => (
+            <Entry
+              key={r.id}
+              name={r.name}
+              message={r.message}
+              createdAt={r.createdAt}
+            />
+          ))}
       </div>
     </Layout>
   );
