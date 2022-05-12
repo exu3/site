@@ -2,7 +2,6 @@ import Layout from "../components/Layout";
 import prisma from "../lib/prisma";
 import Entry from "../components/guestbook/Entry";
 import Link from "next/link";
-import { useEffect } from "react";
 
 const GuestBook = ({ records }) => {
   return (
