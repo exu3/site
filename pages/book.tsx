@@ -41,7 +41,7 @@ const GuestBook = ({ records }) => {
 
 export default GuestBook;
 
-export async function getStaticProps() {
+export async function getServerSideProps() {
   const data = await prisma.guestbook.findMany({
     orderBy: {
       createdAt: "desc",
@@ -55,5 +55,5 @@ export async function getStaticProps() {
     createdAt: record.createdAt.toISOString(),
   }));
 
-  return { props: { records }, revalidate: 1 };
+  return { props: { records } };
 }
