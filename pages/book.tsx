@@ -1,24 +1,21 @@
 import Layout from "../components/Layout";
 import prisma from "../lib/prisma";
 import Entry from "../components/guestbook/Entry";
-import Link from "next/link";
+import Form from "../components/guestbook/Form";
 
 const GuestBook = ({ records }) => {
   return (
-    <Layout heading="The Library">
-      <div>
+    <Layout heading="Library">
+      <div className="pb-3">
         <p className="italic">
           You find yourself in the <strong>Library</strong>.
         </p>
-        <p className="italic">👁️ You see a guestbook.</p>
-        <p>
-          You can{" "}
-          <Link href="/book/new">
-            <a className="link">write a new entry</a>
-          </Link>{" "}
-          or read the existing entries.
-        </p>
+        <p className="italic">You see a guestbook.</p>
+        <br />
+        <p>Perhaps you&apos;d like to add a new entry?</p>
       </div>
+
+      <Form />
 
       <div className="h-10"></div>
 

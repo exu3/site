@@ -27,14 +27,21 @@ const HomePage = () => {
             isn&apos;t much to do here.
           </p>
           <p className="pb-3">
-            Maybe you want to{" "}
+            Perhaps you may want to{" "}
             <Link href="/book" passHref>
               <a className="link">read the guestbook</a>
             </Link>
             ?
           </p>
-          <p className="pb-2">Here is a cat:</p>
-          <Image src={cat} alt="Cat gazing down" placeholder="blur" />
+          <Image
+            src={cat}
+            alt="Cat gazing down"
+            placeholder="blur"
+            height={2000}
+            objectFit="contain"
+          />
+
+          <p className="italic text-center">This is a cat.</p>
         </article>
       </Layout>
     </>

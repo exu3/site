@@ -1,5 +1,3 @@
-import Layout from "../../components/Layout";
-import Link from "next/link";
 import { useState } from "react";
 
 export const GuestbookNew = () => {
@@ -43,12 +41,11 @@ export const GuestbookNew = () => {
       setMessage("");
       setEmail("");
     }
+    // refresh page so the entry shows up
+    window.location.reload();
   };
   return (
-    <Layout heading="" showNav={false}>
-      <div>
-        <p className="italic">Adding a new entry to the guestbook...</p>
-      </div>
+    <>
       <div className="card max-w-min">
         <form onSubmit={handleSubmit} className="flex flex-col space-y-3 w-96">
           <label htmlFor="name">Name</label>
@@ -74,28 +71,19 @@ export const GuestbookNew = () => {
             {isLoading ? "Submitting..." : "Submit"}
           </button>
         </form>
-        {error && <div className="error">{error}</div>}
-        {success && <div className="success">{success}</div>}
-      </div>
-
-      <div>
+        {error && (
+          <div className="px-2 mt-2 text-white bg-red-300 bg-opacity-50 rounded-lg">
+            {error}
+          </div>
+        )}
         {success && (
-          <Link href="/book" passHref>
-            <p className="cursor-pointer text-7xl">📖</p>
-          </Link>
+          <div className="px-2 mt-2 text-white bg-green-300 bg-opacity-50 rounded-lg">
+            {success}
+          </div>
         )}
       </div>
-
-      <div>
-        <p className="pt-4">
-          Lost? Return to the{" "}
-          <Link href="/book">
-            <a className="link">Library</a>
-          </Link>
-          .
-        </p>
-      </div>
-    </Layout>
+    </>
   );
 };
+
 export default GuestbookNew;
