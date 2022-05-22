@@ -9,7 +9,7 @@
     @apply text-gray-400 hover:underline;
   }
   .btn {
-    @apply px-2 text-gray-700 bg-gray-200 rounded-md hover:bg-gray-300 dark:bg-blue-400 dark:text-gray-100 max-w-min focus:outline-none focus:border-gray-400 focus:ring-gray-400;
+    @apply px-3 py-1 text-gray-700 bg-gray-200 rounded-md hover:bg-gray-300 dark:bg-blue-400 dark:text-gray-100 max-w-min focus:outline-none focus:border-gray-400 focus:ring-gray-400;
   }
   .card {
     @apply min-w-0 p-8 m-0 overflow-hidden bg-white rounded-md shadow-xl dark:bg-slate-500;
