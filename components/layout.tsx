@@ -1,7 +1,7 @@
-import Footer from "./Footer";
-import Meta from "./Meta";
-import Nav from "./Nav";
-import ThemeToggle from "./Theme";
+import Footer from "./footer";
+import Meta from "./meta";
+import Nav from "./nav";
+import ThemeToggle from "./theme";
 
 interface LayoutProps {
   children: React.ReactNode;
