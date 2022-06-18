@@ -1,4 +1,4 @@
-import Layout from "../components/Layout";
+import Layout from "../components/layout";
 import Link from "next/link";
 import Image from "next/image";
 import cat from "../public/images/cat.jpg";

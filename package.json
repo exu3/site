@@ -9,6 +9,8 @@
     "lint": "eslint ./ --ext js,jsx,ts,tsx"
   },
   "dependencies": {
+    "@mdx-js/loader": "^2.1.2",
+    "@next/mdx": "^12.1.6",
     "@prisma/client": "^3.13.0",
     "framer-motion": "^6.3.2",
     "lodash": "^4.17.21",
