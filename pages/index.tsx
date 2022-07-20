@@ -1,7 +1,6 @@
 import Layout from "../components/layout";
 import Link from "next/link";
 import Image from "next/image";
-import cat from "../public/images/cat.jpg";
 import { useState } from "react";
 
 const HomePage = () => {
@@ -12,14 +11,14 @@ const HomePage = () => {
   const hellos = ["Hello.", "Bonjour.", "Hola.", "Hallo.", "你好。"];
   return (
     <>
-      <Layout heading={greeting} showNav={false}>
+      <Layout heading={greeting}>
         <article>
           <p className="pb-1">
             <span
               onClick={() =>
                 setHello(hellos[Math.floor(Math.random() * hellos.length)])
               }
-              className="animate-cursor-party"
+              className="cursor-pointer"
             >
               {hello}
             </span>{" "}
@@ -33,15 +32,18 @@ const HomePage = () => {
             </Link>
             ?
           </p>
-          <Image
-            src={cat}
-            alt="Cat gazing down"
-            placeholder="blur"
-            height={2000}
-            objectFit="contain"
-          />
+          <div className="flex justify-start">
+            <Image
+              src="/images/camelshump.JPG"
+              alt="Cat gazing down"
+              placeholder="blur"
+              blurDataURL="iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVR42mPsXf6+HgAGkAKk6/w0SAAAAABJRU5ErkJggg=="
+              height={2000}
+              width={3500}
+            />
+          </div>
 
-          <p className="italic text-center">This is a cat.</p>
+          <p className="pt-1 italic">Vermont, yeah.</p>
         </article>
       </Layout>
     </>

@@ -46,7 +46,7 @@ export const GuestbookNew = () => {
   };
   return (
     <>
-      <div className="card max-w-min">
+      <div className="max-w-min">
         <form onSubmit={handleSubmit} className="flex flex-col space-y-3 w-96">
           <label htmlFor="name">Name</label>
           <input

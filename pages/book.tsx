@@ -5,17 +5,10 @@ import Form from "../components/guestbook/Form";
 
 const GuestBook = ({ records }) => {
   return (
-    <Layout heading="Library">
-      <div className="pb-3">
-        <p className="italic">
-          You find yourself in the <strong>Library</strong>.
-        </p>
-        <p className="italic">You see a guestbook.</p>
-        <br />
-        <p>Perhaps you&apos;d like to add a new entry?</p>
-      </div>
-
+    <Layout heading="Guestbook">
       <Form />
+      <br />
+      <hr />
 
       <div className="h-10"></div>
 
