@@ -2,7 +2,7 @@ import Link from "next/link";
 
 const links = [
   { name: "home", destination: "/" },
-  { name: "guestbook", destination: "/book" },
+  // { name: "guestbook", destination: "/book" },
 ];
 
 export default function Nav(): JSX.Element {

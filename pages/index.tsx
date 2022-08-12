@@ -25,13 +25,13 @@ const HomePage = () => {
             My name is Ella. Welcome to my humble internet home. There
             isn&apos;t much to do here.
           </p>
-          <p className="pb-3">
+          {/* <p className="pb-3">
             Perhaps you may want to{" "}
             <Link href="/book" passHref>
               <a className="link">read the guestbook</a>
             </Link>
             ?
-          </p>
+          </p> */}
           <div className="flex justify-start">
             <Image
               src="/images/camelshump.JPG"
